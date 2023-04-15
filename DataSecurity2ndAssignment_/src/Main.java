@@ -2,7 +2,8 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!!!!!!!!!!!!!!!!!");
+
+        ;
     }
 }
 class VigenereCipher{
@@ -42,5 +43,20 @@ class VigenereCipher{
             }
         }
         return decrypted.toString();
+    }
+    public String encrypt(String message) {
+        StringBuilder encrypted = new StringBuilder();
+        int keyIndex = 0;
+        for (char c : message.toCharArray()) {
+            if (Character.isLetter(c)) {
+                int key = this.key[keyIndex];
+                char newChar = (char)(((Character.toUpperCase(c) - 'A' + key) % 26) + 'A');
+                encrypted.append(newChar);
+                keyIndex = (keyIndex + 1) % this.key.length;
+            } else {
+                encrypted.append(c);
+            }
+        }
+        return encrypted.toString();
     }
 }
