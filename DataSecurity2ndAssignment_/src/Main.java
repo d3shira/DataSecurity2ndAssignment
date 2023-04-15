@@ -27,4 +27,20 @@ class VigenereCipher{
             this.key[i] = rand.nextInt(26);
         }
     }
+    
+    public String decrypt(String message) {
+        StringBuilder decrypted = new StringBuilder();
+        int keyIndex = 0;
+        for (char c : message.toCharArray()) {
+            if (Character.isLetter(c)) {
+                int key = this.key[keyIndex];
+                char newChar = (char)(((Character.toUpperCase(c) - 'A' - key + 26) % 26) + 'A');
+                decrypted.append(newChar);
+                keyIndex = (keyIndex + 1) % this.key.length;
+            } else {
+                decrypted.append(c);
+            }
+        }
+        return decrypted.toString();
+    }
 }
