@@ -12,5 +12,3 @@ Dëshira Randobrava
 Diart Maraj
 Dion Dauti
 Dion Kastrati
-un gati e kom
-veq spo di a me bo ma ndetaje
