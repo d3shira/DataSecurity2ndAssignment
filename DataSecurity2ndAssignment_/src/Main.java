@@ -2,13 +2,28 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        
+        //INT SEED
+        VigenereCipherClass cipherInt = new VigenereCipherClass(12345);
+        String message = "HELLO WORLD";
+        String encrypted = cipherInt.encrypt(message);
+        System.out.println("Encrypted message using an int32 as a seed: " + encrypted);
+        String decrypted = cipherInt.decrypt(encrypted);
+        System.out.println("Decrypted message using an int32 as a seed: " + decrypted);
+
+        //STRING SEED
+        VigenereCipherClass cipherString = new VigenereCipherClass("STRINGSEED");
+        String message1 = "HELLO WORLD";
+        String encrypted1 = cipherString.encrypt(message1);
+        System.out.println("Encrypted message using a string as a seed: " + encrypted1);
+        String decrypted1 = cipherString.decrypt(encrypted1);
+        System.out.println("Decrypted message using a string as a seed: " + decrypted1);
     }
+
 }
-class VigenereCipher{
+class VigenereCipherClass{
     private int[] key;
 
-    public VigenereCipher(int seed) {
+    public VigenereCipherClass(int seed) {
         Random rand = new Random(seed);
         this.key = new int[100];
         for (int i = 0; i < this.key.length; i++) {
@@ -16,7 +31,7 @@ class VigenereCipher{
         }
     }
 
-    public VigenereCipher(String seed) {
+    public VigenereCipherClass(String seed) {
         int sum = 0;
         for (int i = 0; i < seed.length(); i++) {
             sum += (int)Character.toUpperCase(seed.charAt(i));
@@ -62,5 +77,6 @@ class VigenereCipher{
         }
         return decrypted.toString();
     }
+
 
 }
