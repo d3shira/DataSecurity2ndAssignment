@@ -1,10 +1,14 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
         //INT SEED
+        System.out.print("Message (int32 seed): ");
+        String message = scanner.nextLine();
         VigenereCipherClass cipherInt = new VigenereCipherClass(12345);
-        String message = "HELLO WORLD";
         String encrypted = cipherInt.encrypt(message);
         System.out.println("Encrypted message using an int32 as a seed: " + encrypted);
         String decrypted = cipherInt.decrypt(encrypted);
@@ -12,7 +16,8 @@ public class Main {
 
         //STRING SEED
         VigenereCipherClass cipherString = new VigenereCipherClass("STRINGSEED");
-        String message1 = "HELLO WORLD";
+        System.out.print("Message (String seed): ");
+        String message1 = scanner.nextLine();
         String encrypted1 = cipherString.encrypt(message1);
         System.out.println("Encrypted message using a string as a seed: " + encrypted1);
         String decrypted1 = cipherString.decrypt(encrypted1);
