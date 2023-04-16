@@ -1,3 +1,16 @@
-# DataSecurity 2nd Assignment 
-Code of the Vigenère Cipher by generating a key from a keystream using an int 32 and a string as a seed.
-The Vigenère cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers, based on the letters of a keyword. It employs a form of polyalphabetic substitution.
+# Projekti i dytë: Vigenère Cipher
+Ky projekt eshte punë e studenteve të FIEK në lenden Siguria e të dhenave.
+Algoritmi Vigenere Cipher është shkruar në gjuhën programuese JAVA.
+Ky algoritëm bazohet në parimin e punës së kodit të Cezarit (Caesar cipher) ku bëhet enkriptimi i tekstit alfabetik duke përdorur një seri të ndërthurura të kodeve të Cezarit, bazuar në shkronjat e një çelësi të dhënë. Ai përdor një formë të zëvendësimit polialfabetik.
+Në projektin tonë, algoritmi është implementuar në dy menyra:
+1. Enkriptimi dhe dekriptimi i teksit duke gjeneruar një çelës nga keystream duke përdorur një int32 si seed, dhe
+2. Enkriptimi dhe dekriptimi i tekstit duke gjeneruar një çelës nga keystream duke përdorur një String si seed
+
+Grupi 12
+Anëtarët e grupit:
+Dëshira Randobrava
+Diart Maraj
+Dion Dauti
+Dion Kastrati
+un gati e kom
+veq spo di a me bo ma ndetaje
