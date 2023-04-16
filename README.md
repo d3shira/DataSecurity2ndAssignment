@@ -7,8 +7,10 @@ Në projektin tonë, algoritmi është implementuar në dy menyra:
 2. Enkriptimi dhe dekriptimi i tekstit duke gjeneruar një çelës nga keystream duke përdorur një String si seed
 
 Grupi 12
+
 Anëtarët e grupit:
-Dëshira Randobrava
-Diart Maraj
-Dion Dauti
+
+Dëshira Randobrava,
+Diart Maraj,
+Dion Dauti,
 Dion Kastrati
