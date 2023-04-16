@@ -33,8 +33,13 @@ class VigenereCipher{
         for (char c : message.toCharArray()) {
             if (Character.isLetter(c)) {
                 int key = this.key[keyIndex];
-                char newChar = (char)(((Character.toUpperCase(c) - 'A' + key) % 26) + 'A');
-                encrypted.append(newChar);
+                if (Character.isUpperCase(c)) {
+                    char newChar = (char) (((c - 'A' + key) % 26) + 'A');
+                    encrypted.append(newChar);
+                } else {
+                    char newChar = (char) (((c - 'a' + key) % 26) + 'a');
+                    encrypted.append(newChar);
+                }
                 keyIndex = (keyIndex + 1) % this.key.length;
             } else {
                 encrypted.append(c);
